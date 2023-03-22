@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/Baidu-AIP/golang-sdk/aip/censor"
+	"github.com/gtkit/baidu-ai/aip/censor"
 )
 
 func TestText(t *testing.T) {
