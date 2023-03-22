@@ -19,7 +19,7 @@ package censor
 import (
 	"strconv"
 
-	"github.com/Baidu-AIP/golang-sdk/baseClient"
+	"github.com/gtkit/baidu-ai/baseClient"
 )
 
 const __imageCensorUserDefinedUrl = "https://aip.baidubce.com/rest/2.0/solution/v1/img_censor/v2/user_defined"

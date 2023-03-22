@@ -17,10 +17,9 @@ limitations under the License.
 package imagesearch
 
 import (
-
 	"strconv"
 
-	"github.com/Baidu-AIP/golang-sdk/baseClient"
+	"github.com/gtkit/baidu-ai/baseClient"
 )
 
 const __imageSearchSameHqAdd = "https://aip.baidubce.com/rest/2.0/realtime_search/same_hq/add"
@@ -54,7 +53,6 @@ const __imageSearchPictureBookSearch = "https://aip.baidubce.com/rest/2.0/images
 const __imageSearchPictureBookDelete = "https://aip.baidubce.com/rest/2.0/imagesearch/v1/realtime_search/picturebook/delete"
 
 const __imageSearchPictureBookUpdate = "https://aip.baidubce.com/rest/2.0/imagesearch/v1/realtime_search/picturebook/update"
-
 
 type ImageSearchClient struct {
 	auth baseClient.Auth
@@ -275,7 +273,7 @@ func (client *ImageSearchClient) SameHqAddUrl(image string, brief string,
 }
 
 // SameHqSearch 相同图片搜索 - 检索
-func (client *ImageSearchClient) SameHqSearch(image string,	options map[string]interface{}) (result string) {
+func (client *ImageSearchClient) SameHqSearch(image string, options map[string]interface{}) (result string) {
 	data := make(map[string]string)
 
 	data["image"] = image
@@ -729,6 +727,3 @@ func (client *ImageSearchClient) PictureBookUpdateSign(contSign string, options 
 
 	return baseClient.PostUrlForm(__imageSearchPictureBookUpdate, data, &client.auth)
 }
-
-
-
